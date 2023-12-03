@@ -54,11 +54,11 @@ fn main() {
                     }
                 }
 
+                added_numbers.extend(prepared_nums.clone());
+
                 if ch == '*' && prepared_nums.len() == 2 {
                     let gear_mult = prepared_nums.into_iter().fold(1, |acc, num| acc * num.num);
                     mult_gears += gear_mult;
-                } else {
-                    added_numbers.extend(prepared_nums);
                 }
             }
         }
